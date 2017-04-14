@@ -1,9 +1,5 @@
-# -*- coding: utf-8 -*-
-"""
-Spyder Editor
+#Author Michael Rose
 
-This is a temporary script file.
-"""
 from bitarray import bitarray
 from math import log
 import argparse
@@ -71,8 +67,6 @@ def testPasswords(bf3,bf5,inp):
     return bf3Bool,bf5Bool
 #write to file
 def writeFiles(out,bf3,bf5):
-    print(out[0])
-    print(out[1])
     f = open(out[0],'w')
     for v in bf3:    
         if v:
@@ -105,6 +99,4 @@ for i in bf5:
 bf3,bf5 = setArrays(bf3,bf5,args.dic)
 bf3Bool, bf5Bool = testPasswords(bf3,bf5,args.inp)
 writeFiles(args.out,bf3Bool,bf5Bool)
-print(args.dic)
-print(args.inp)
-print(args.out)
+print("Done")
